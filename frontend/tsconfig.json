@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+      // We target modern JavaScript (ESNext) features.
+      "target": "ESNext",
+  
+      // Include modern language and browser APIs such as DOM, DOM.Iterable, etc.
+      "lib": ["DOM", "DOM.Iterable", "ESNext"],
+  
+      // For React 18, it's recommended to use react-jsx
+      "jsx": "react-jsx",
+  
+      // Use the Node module resolution strategy
+      "moduleResolution": "node",
+      "module": "ESNext",
+  
+      // Ensures consistent usage of imports (needed for default imports like `import React from 'react'`)
+      "esModuleInterop": true,
+  
+      // Skip .d.ts checking for faster builds
+      "skipLibCheck": true,
+  
+      // Strict mode ensures the highest level of type-safety
+      "strict": true,
+  
+      // Ensure file name casing matches across imports/exports
+      "forceConsistentCasingInFileNames": true,
+  
+      // Don't emit .js files—CRA handles the build process
+      "noEmit": true,
+  
+      // Treat each file as a separate module, required for Babel-based bundlers
+      "isolatedModules": true,
+  
+      // If you need to import JSON files, allow that as well
+      "resolveJsonModule": true
+    },
+    // Include all .ts/.tsx files in the `src/` directory
+    "include": ["src"]
+  }
+  
