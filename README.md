@@ -222,7 +222,7 @@ Permission is hereby granted...
 
 ## **Contact**
 
-- **Anushka PS**: [LinkedIn](http://www.linkedin.com/in/anushka-pratap-singh)
+- [LinkedIn](http://www.linkedin.com/in/anushka-pratap-singh)
 - [Twitter handle](https://x.com/anushkapspsps)
 - If you have any questions or issues, please open an **issue** or submit a **pull request**. 
 
