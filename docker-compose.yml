@@ -7,18 +7,28 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
+    networks:
+      - crypto_network
 
   redis:
     image: redis
     container_name: crypto_redis
     ports:
       - "6379:6379"
+    networks:
+      - crypto_network
 
   backend:
     build: ./backend
     container_name: crypto_backend
     ports:
       - "4000:4000"
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - MONGO_URI=mongodb://mongo:27017/crypto
+    networks:
+      - crypto_network
     depends_on:
       - mongo
       - redis
@@ -28,8 +38,14 @@ services:
     container_name: crypto_frontend
     ports:
       - "3000:3000"
+    networks:
+      - crypto_network
     depends_on:
       - backend
+
+networks:
+  crypto_network:
+    driver: bridge
 
 volumes:
   mongo_data:
